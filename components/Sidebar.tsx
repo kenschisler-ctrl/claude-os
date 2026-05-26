@@ -3,16 +3,17 @@ import { motion } from "framer-motion";
 import React from "react";
 import {
   MessageSquare, Bot, BarChart3, Terminal, Layers, Settings, Zap, Database, GitBranch, Radio,
-  BookOpen, Target,
+  BookOpen, Target, BookMarked,
 } from "lucide-react";
 
-export type PanelId = "chat" | "agents" | "metrics" | "terminal" | "models" | "settings" | "workflows" | "memory" | "logs" | "deploy" | "journal" | "goals";
+export type PanelId = "chat" | "agents" | "metrics" | "terminal" | "models" | "settings" | "workflows" | "memory" | "logs" | "deploy" | "journal" | "goals" | "guide";
 
 const NAV: { id: PanelId; icon: React.ElementType; label: string; color: string; badge?: string }[] = [
   { id: "chat",      icon: MessageSquare, label: "Chat",      color: "#00d4ff" },
   { id: "agents",    icon: Bot,           label: "Agents",    color: "#8b5cf6", badge: "2" },
   { id: "journal",   icon: BookOpen,      label: "Journal",   color: "#8b5cf6" },
   { id: "goals",     icon: Target,        label: "Goals",     color: "#f59e0b" },
+  { id: "guide",     icon: BookMarked,    label: "Guide",     color: "#ec4899" },
   { id: "workflows", icon: GitBranch,     label: "Flows",     color: "#10b981" },
   { id: "metrics",   icon: BarChart3,     label: "Analytics", color: "#f59e0b" },
   { id: "memory",    icon: Database,      label: "Memory",    color: "#f43f5e" },

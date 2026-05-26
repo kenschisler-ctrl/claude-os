@@ -16,6 +16,7 @@ import MemoryPanel from "@/components/MemoryPanel";
 import DeployPanel from "@/components/DeployPanel";
 import JournalPanel from "@/components/JournalPanel";
 import GoalsPanel from "@/components/GoalsPanel";
+import GuidePanel from "@/components/GuidePanel";
 import SetupWizard from "@/components/SetupWizard";
 
 const PANEL_META: Record<PanelId, { label: string; color: string; desc: string }> = {
@@ -23,6 +24,7 @@ const PANEL_META: Record<PanelId, { label: string; color: string; desc: string }
   agents:    { label: "AI Agents",      color: "#8b5cf6", desc: "Manage and monitor your AI workforce" },
   journal:   { label: "Journal",        color: "#8b5cf6", desc: "Daily notes saved to Obsidian vault" },
   goals:     { label: "Goals",          color: "#f59e0b", desc: "Track objectives synced to vault" },
+  guide:     { label: "Build Guide",    color: "#ec4899", desc: "How to build this with Claude" },
   workflows: { label: "Workflows",      color: "#10b981", desc: "Automate complex multi-step pipelines" },
   metrics:   { label: "Analytics",      color: "#f59e0b", desc: "Real-time system performance" },
   memory:    { label: "Memory Bank",    color: "#f43f5e", desc: "Persistent knowledge store" },
@@ -39,6 +41,7 @@ function PanelContent({ id }: { id: PanelId }) {
     case "agents":    return <AgentsPanel />;
     case "journal":   return <JournalPanel />;
     case "goals":     return <GoalsPanel />;
+    case "guide":     return <GuidePanel />;
     case "metrics":   return <MetricsPanel />;
     case "terminal":  return <TerminalPanel />;
     case "workflows": return <WorkflowsPanel />;
