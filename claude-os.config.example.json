@@ -1,0 +1,7 @@
+{
+  "setupComplete": false,
+  "anthropicApiKey": "",
+  "vaultPath": "",
+  "vaultFolder": "Agentic OS",
+  "enabledAgents": ["claude"]
+}
